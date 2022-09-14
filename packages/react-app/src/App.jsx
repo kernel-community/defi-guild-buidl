@@ -30,7 +30,7 @@ import externalContracts from "./contracts/external_contracts";
 // contracts
 import deployedContracts from "./contracts/hardhat_contracts.json";
 import { Transactor, Web3ModalSetup } from "./helpers";
-import { Home, ExampleUI, Hints, Subgraph } from "./views";
+import { Home, ExampleUI, Subgraph } from "./views";
 import { useStaticJsonRPC } from "./hooks";
 import Bondable from "./components/Bondable";
 import Market from "./components/Market";
@@ -294,9 +294,7 @@ function App(props) {
         {/* <Menu.Item key="/debug">
           <Link to="/debug">Debug Contracts</Link>
         </Menu.Item>
-        <Menu.Item key="/hints">
-          <Link to="/hints">Hints</Link>
-        </Menu.Item>
+        
         <Menu.Item key="/exampleui">
           <Link to="/exampleui">ExampleUI</Link>
         </Menu.Item>
@@ -350,14 +348,7 @@ function App(props) {
             contractConfig={contractConfig}>
           </Market>
         </Route>
-        <Route path="/hints">
-          <Hints
-            address={address}
-            yourLocalBalance={yourLocalBalance}
-            mainnetProvider={mainnetProvider}
-            price={price}
-          />
-        </Route>
+       
         <Route path="/exampleui">
           <ExampleUI
             address={address}
